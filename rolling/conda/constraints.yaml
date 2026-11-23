@@ -17,11 +17,21 @@ base:
 
 pins:
   argcomplete: ==3.1.4
+  asio: ==1.28.1
+  assimp: ==5.3.1
   benchmark: ==1.8.3
+  bullet: ==3.25
   catkin_pkg: ==1.0.0
+  clang-tools: ==18.1.8
+  cli11: ==2.4.1
   cmake: ==3.28.3
   colcon-common-extensions: 0.3.*
+  colorama: ==0.4.6
+  console_bridge: ==1.0.1
   cppcheck: ==2.15.0
+  cryptography: ==41.0.7
+  eigen: ==3.4.0
+  empy: ==3.3.4
   flake8: ==7.0.0
   flake8-blind-except: ==0.2.1
   flake8-builtins: ==2.1.0
@@ -30,22 +40,58 @@ pins:
   flake8-deprecated: ==2.2.1
   flake8-import-order: ==0.18.2
   flake8-quotes: ==3.4.0
+  freetype: ==2.13.3
+  fzf: '>=0.44,<1'
   git: '>=2.43.0'
   gmock: ==1.17.0
+  graphviz: ==9.0.0
   gtest: ==1.17.0
   lark: ==1.1.9
+  libcurl: '>=8.5.0,<9'
   libxml2: '>=2.12,<3'
+  lxml: ==5.2.1
+  lz4-c: ==1.9.4
+  matplotlib-base: 3.8.*
   mypy: ==1.9.0
   ninja: '>=1.13.2,<2'
+  nlohmann_json: ==3.11.3
+  numpy: ==1.26.4
+  opencv: ==4.10.0
+  openssl: '>=3.4,<4'
+  orocos-kdl: ==1.5.1
   osrf_pycommon: ==0.2.1
+  packaging: ==24.0
+  pillow: 10.*
+  psutil: ==5.9.8
+  pybind11: ==2.11.1
+  pycairo: 1.25.*
   pycodestyle: ==2.11.1
+  pydantic: ==1.10.14
   pydocstyle: ==6.3.0
+  pydot: ==1.4.2
+  pyflakes: ==3.2.0
+  pygraphviz: ==1.11
+  pyqt6: '>=6.7,<7'
+  pyqt6-sip: '>=13.0,<14'
   pytest: ==7.4.4
+  pytest-asyncio: ==0.20.3
+  pytest-cov: ==4.1.0
   pytest-mock: ==3.12.0
   pytest-timeout: ==2.2.0
+  python-fastjsonschema: ==2.19.0
+  python-orocos-kdl: ==1.5.1
   pyyaml: ==6.0.1
+  qt6-main: '>=6,<7'
+  rosdistro: ==1.0.0
+  rust: ==1.93.0
   setuptools: ==68.1.2
+  spdlog: ==1.12.0
+  sqlite: '>=3.47,<4'
+  tinyxml2: ==10.0.0
   types-pyyaml: ==6.0.1
   typing_extensions: ==4.10.0
   uncrustify: ==0.78.1
   vcstool: ==0.3.0
+  yaml: ==0.2.5
+  yaml-cpp: ==0.8.0
+  zstd: ~=1.5.5

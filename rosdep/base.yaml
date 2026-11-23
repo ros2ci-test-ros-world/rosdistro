@@ -4,6 +4,36 @@
 # the same keys. The conda entries are new. Only keys that something in the
 # test workspaces needs are here.
 
+acl:
+  rhel:
+  - acl
+  - libacl-devel
+  ubuntu:
+  - acl
+  - libacl1-dev
+asio:
+  conda:
+  - asio
+  rhel:
+  - asio-devel
+  ubuntu:
+  - libasio-dev
+assimp:
+  conda:
+  - assimp
+  rhel:
+  - assimp-devel
+  ubuntu:
+    '*':
+    - libassimp-dev
+assimp-dev:
+  conda:
+  - assimp
+  rhel:
+  - assimp-devel
+  ubuntu:
+    '*':
+    - libassimp-dev
 benchmark:
   conda:
   - benchmark
@@ -12,6 +42,57 @@ benchmark:
   ubuntu:
     '*':
     - libbenchmark-dev
+bullet:
+  conda:
+  - bullet
+  rhel:
+  - bullet-devel
+  ubuntu:
+    '*':
+    - libbullet-dev
+cargo:
+  conda:
+  - rust
+  rhel:
+  - cargo
+  ubuntu:
+  - cargo
+clang:
+  rhel:
+    '*':
+    - clang
+    '7': null
+  ubuntu:
+  - clang
+clang-format:
+  conda:
+  - clang-tools
+  rhel:
+    '*':
+    - clang-tools-extra
+    - git-clang-format
+    '7': null
+  ubuntu:
+  - clang-format
+clang-tidy:
+  conda:
+  - clang-tools
+  rhel:
+    '*':
+    - clang-tools-extra
+    '7': null
+  ubuntu:
+    '*':
+    - clang-tidy
+cli11:
+  conda:
+  - cli11
+  rhel:
+  - cli11-devel
+  ubuntu:
+    '*':
+    - libcli11-dev
+    focal: null
 cmake:
   conda:
   - cmake
@@ -26,6 +107,20 @@ cppcheck:
   - cppcheck
   ubuntu:
   - cppcheck
+eigen:
+  conda:
+  - eigen
+  rhel:
+  - eigen3-devel
+  ubuntu:
+  - libeigen3-dev
+fzf:
+  conda:
+  - fzf
+  rhel:
+  - fzf
+  ubuntu:
+  - fzf
 git:
   conda:
   - git
@@ -33,11 +128,66 @@ git:
   - git
   ubuntu:
   - git
+graphviz:
+  conda:
+  - graphviz
+  rhel:
+  - graphviz
+  ubuntu:
+  - graphviz
 libatomic:
   rhel:
   - libatomic
   ubuntu:
   - libatomic1
+libconsole-bridge-dev:
+  conda:
+  - console_bridge
+  rhel:
+  - console-bridge-devel
+  ubuntu:
+  - libconsole-bridge-dev
+libcurl:
+  conda:
+  - libcurl
+  rhel:
+  - libcurl
+  ubuntu:
+    '*':
+    - libcurl4t64
+    focal:
+    - libcurl4
+    jammy:
+    - libcurl4
+libcurl-dev:
+  conda:
+  - libcurl
+  rhel:
+  - libcurl-devel
+  ubuntu:
+  - libcurl4-openssl-dev
+libfreetype-dev:
+  conda:
+  - freetype
+  rhel:
+  - freetype-devel
+  ubuntu:
+    '*':
+    - libfreetype-dev
+    bionic:
+    - libfreetype6-dev
+libfreetype6:
+  conda:
+  - freetype
+  rhel:
+  - freetype
+  ubuntu:
+  - libfreetype6
+libglew-dev:
+  rhel:
+  - glew-devel
+  ubuntu:
+  - libglew-dev
 libgmock-dev:
   conda:
   - gmock
@@ -52,6 +202,227 @@ libgtest-dev:
   - gtest-devel
   ubuntu:
   - libgtest-dev
+liblttng-ctl-dev:
+  rhel:
+  - lttng-tools-devel
+  ubuntu:
+  - liblttng-ctl-dev
+liblttng-ust-dev:
+  rhel:
+  - lttng-ust-devel
+  ubuntu:
+  - liblttng-ust-dev
+liblz4-dev:
+  conda:
+  - lz4-c
+  rhel:
+  - lz4-devel
+  ubuntu:
+  - liblz4-dev
+libncurses-dev:
+  rhel:
+  - ncurses-devel
+  ubuntu:
+  - libncurses-dev
+libopencv-core:
+  conda:
+  - opencv
+  rhel:
+  - opencv-core
+  ubuntu:
+    jammy:
+    - libopencv-core4.5d
+    noble:
+    - libopencv-core406t64
+    resolute:
+    - libopencv-core410
+libopencv-dev:
+  conda:
+  - opencv
+  rhel:
+  - opencv-devel
+  ubuntu:
+  - libopencv-dev
+libopencv-highgui:
+  conda:
+  - opencv
+  rhel:
+    '*':
+    - opencv-highgui
+    '8':
+    - opencv-core
+    '9':
+    - opencv-core
+  ubuntu:
+    '*':
+    - libopencv-highgui410
+    focal: null
+    jammy:
+    - libopencv-highgui4.5d
+    noble:
+    - libopencv-highgui406t64
+libopencv-imgcodecs:
+  conda:
+  - opencv
+  rhel:
+    '*':
+    - opencv-imgcodecs
+    '8':
+    - opencv-core
+    '9':
+    - opencv-core
+  ubuntu:
+    jammy:
+    - libopencv-imgcodecs4.5d
+    noble:
+    - libopencv-imgcodecs406t64
+    resolute:
+    - libopencv-imgcodecs410
+libopencv-imgproc:
+  conda:
+  - opencv
+  rhel:
+    '*':
+    - opencv-imgproc
+    '8':
+    - opencv-core
+    '9':
+    - opencv-core
+  ubuntu:
+    jammy:
+    - libopencv-imgproc4.5d
+    noble:
+    - libopencv-imgproc406t64
+    resolute:
+    - libopencv-imgproc410
+libopencv-videoio:
+  conda:
+  - opencv
+  rhel:
+    '*':
+    - opencv-videoio
+    '8':
+    - opencv-core
+    '9':
+    - opencv-core
+  ubuntu:
+    '*':
+    - libopencv-videoio410
+    focal: null
+    jammy:
+    - libopencv-videoio4.5d
+    noble:
+    - libopencv-videoio406t64
+liborocos-kdl:
+  conda:
+  - orocos-kdl
+  rhel:
+    '*':
+    - orocos-kdl
+    '7': null
+  ubuntu:
+    '*':
+    - liborocos-kdl1.5
+    bionic:
+    - liborocos-kdl1.3
+    focal:
+    - liborocos-kdl1.4
+liborocos-kdl-dev:
+  conda:
+  - orocos-kdl
+  rhel:
+    '*':
+    - orocos-kdl-devel
+    '7': null
+  ubuntu:
+  - liborocos-kdl-dev
+libqt6-core:
+  conda:
+  - qt6-main
+  rhel:
+    '*':
+    - qt6-qtbase
+    '8': null
+  ubuntu:
+    '*':
+    - libqt6core6t64
+    focal: null
+    jammy:
+    - libqt6core6
+libqt6-gui:
+  conda:
+  - qt6-main
+  rhel:
+    '*':
+    - qt6-qtbase-gui
+    '8': null
+  ubuntu:
+    '*':
+    - libqt6gui6
+    focal: null
+    noble:
+    - libqt6gui6t64
+libqt6-opengl:
+  conda:
+  - qt6-main
+  rhel:
+    '*':
+    - qt6-qtbase
+    '8': null
+  ubuntu:
+    '*':
+    - libqt6opengl6
+    focal: null
+    noble:
+    - libqt6opengl6t64
+libqt6-widgets:
+  conda:
+  - qt6-main
+  rhel:
+    '*':
+    - qt6-qtbase
+    '8': null
+  ubuntu:
+    '*':
+    - libqt6widgets6
+    focal: null
+    noble:
+    - libqt6widgets6t64
+libqt6svg6:
+  conda:
+  - qt6-main
+  rhel:
+    '*':
+    - qt6-qtsvg-devel
+    '8': null
+  ubuntu:
+    '*':
+    - libqt6svg6
+    focal: null
+libsqlite3-dev:
+  conda:
+  - sqlite
+  rhel:
+  - libsq3-devel
+  ubuntu:
+  - libsqlite3-dev
+libssl-dev:
+  conda:
+  - openssl
+  rhel:
+  - openssl-devel
+  ubuntu:
+  - libssl-dev
+libx11-dev:
+  rhel:
+  - libX11-devel
+  ubuntu:
+  - libx11-dev
+libxaw:
+  rhel:
+  - libXaw-devel
+  ubuntu:
+  - libxaw7-dev
 libxml2-utils:
   conda:
   - libxml2
@@ -59,13 +430,135 @@ libxml2-utils:
   - libxml2
   ubuntu:
   - libxml2-utils
-ninja-build:
+libxrandr:
   rhel:
-  - ninja-build
+  - libXrandr-devel
+  ubuntu:
+  - libxrandr-dev
+libyaml-dev:
+  conda:
+  - yaml
+  rhel:
+  - libyaml-devel
+  ubuntu:
+  - libyaml-dev
+libzstd-dev:
+  conda:
+  - zstd
+  rhel:
+  - libzstd-devel
+  ubuntu:
+    '*':
+    - libzstd-dev
+lttng-tools:
+  rhel:
+  - lttng-tools
+  ubuntu:
+  - lttng-tools
+ninja-build:
   conda:
   - ninja
+  rhel:
+  - ninja-build
   ubuntu:
   - ninja-build
+nlohmann-json-dev:
+  conda:
+  - nlohmann_json
+  rhel:
+  - json-devel
+  ubuntu:
+    '*':
+    - nlohmann-json3-dev
+    bionic:
+    - nlohmann-json-dev
+opengl:
+  rhel:
+  - mesa-libGL-devel
+  - mesa-libGLU-devel
+  ubuntu:
+  - libgl1-mesa-dev
+  - libglu1-mesa-dev
+openssl:
+  conda:
+  - openssl
+  rhel:
+  - openssl
+  ubuntu:
+  - openssl
+pkg-config:
+  rhel:
+  - pkgconfig
+  ubuntu:
+  - pkg-config
+procps:
+  rhel:
+  - procps-ng
+  ubuntu:
+  - procps
+pybind11-dev:
+  conda:
+  - pybind11
+  rhel:
+    '*':
+    - pybind11-devel
+    '7': null
+    '8': null
+  ubuntu:
+  - pybind11-dev
+qt6-base-dev:
+  conda:
+  - qt6-main
+  rhel:
+    '*':
+    - qt6-qtbase-devel
+    '8': null
+  ubuntu:
+    '*':
+    - qt6-base-dev
+    focal: null
+qt6-qmake:
+  conda:
+  - qt6-main
+  rhel:
+    '*':
+    - qt6-qtbase-devel
+    '8': null
+  ubuntu:
+    '*':
+    - qmake6
+    focal: null
+qt6-svg-dev:
+  conda:
+  - qt6-main
+  rhel:
+    '*':
+    - qt6-qtsvg-devel
+    '8': null
+  ubuntu:
+    '*':
+    - qt6-svg-dev
+    focal: null
+    jammy: null
+spdlog:
+  conda:
+  - spdlog
+  rhel:
+  - spdlog-devel
+  ubuntu:
+  - libspdlog-dev
+tango-icon-theme:
+  rhel:
+  - tango-icon-theme
+  ubuntu:
+  - tango-icon-theme
+tinyxml2:
+  conda:
+  - tinyxml2
+  rhel:
+  - tinyxml2-devel
+  ubuntu:
+  - libtinyxml2-dev
 uncrustify:
   conda:
   - uncrustify
@@ -73,3 +566,17 @@ uncrustify:
   - uncrustify
   ubuntu:
   - uncrustify
+yaml:
+  conda:
+  - yaml
+  rhel:
+  - libyaml-devel
+  ubuntu:
+  - libyaml-dev
+yaml-cpp:
+  conda:
+  - yaml-cpp
+  rhel:
+  - yaml-cpp-devel
+  ubuntu:
+  - libyaml-cpp-dev
