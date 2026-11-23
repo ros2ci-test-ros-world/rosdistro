@@ -1,16 +1,18 @@
 # rosdep rules for the test rosdistro.
 #
 # The ubuntu and rhel entries are copied from the rules in ros/rosdistro for
-# the same keys. The conda entries are new. Only keys that something in the
-# test workspaces needs are here.
+# the same keys, except where a rule named a package that only the ROS package
+# repositories carry: those name the distribution's own package, or pip. The
+# conda entries are new. Only keys that something in the test workspaces needs
+# are here.
 
 pydocstyle:
   conda:
   - pydocstyle
   rhel:
-    '*':
-    - python3-pydocstyle
-    '7': null
+    pip:
+      packages:
+      - pydocstyle
   ubuntu:
   - pydocstyle
 python3-catkin-pkg-modules:
@@ -19,7 +21,7 @@ python3-catkin-pkg-modules:
   rhel:
   - python%{python3_pkgversion}-catkin_pkg
   ubuntu:
-  - python3-catkin-pkg-modules
+  - python3-catkin-pkg
 python3-colcon-common-extensions:
   conda:
   - colcon-common-extensions
@@ -236,7 +238,7 @@ python3-vcstool:
   rhel:
   - python3-vcstool
   ubuntu:
-  - python3-vcstool
+  - vcstool
 python3-yaml:
   conda:
   - pyyaml
