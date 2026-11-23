@@ -1,0 +1,11 @@
+%YAML 1.1
+# The test Rolling distribution. No packages are released into it yet.
+---
+release_platforms:
+  rhel:
+  - '10'
+  ubuntu:
+  - resolute
+repositories: {}
+type: distribution
+version: 2

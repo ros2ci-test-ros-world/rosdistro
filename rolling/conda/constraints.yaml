@@ -1,0 +1,50 @@
+# Versions of conda packages for the test Rolling distribution.
+#
+# The rosdep rules give a key its conda package names. This file gives the
+# versions. A conda package that is not listed here is not available, and a
+# rosdep key that names it does not resolve on conda.
+#
+# Most versions here are the ones in the pixi.toml of ros2/ros2, which track
+# what Ubuntu 24.04 ships.
+
+# Searched in order.
+channels:
+- conda-forge
+
+# Always in the environment.
+base:
+  python: ==3.12.3
+
+pins:
+  benchmark: ==1.8.3
+  catkin_pkg: ==1.0.0
+  cmake: ==3.28.3
+  colcon-common-extensions: 0.3.*
+  cppcheck: ==2.15.0
+  flake8: ==7.0.0
+  flake8-blind-except: ==0.2.1
+  flake8-builtins: ==2.1.0
+  flake8-class-newline: ==1.6.0
+  flake8-comprehensions: ==3.14.0
+  flake8-deprecated: ==2.2.1
+  flake8-import-order: ==0.18.2
+  flake8-quotes: ==3.4.0
+  git: '>=2.43.0'
+  gmock: ==1.17.0
+  gtest: ==1.17.0
+  lark: ==1.1.9
+  libxml2: '>=2.12,<3'
+  mypy: ==1.9.0
+  ninja: '>=1.13.2,<2'
+  osrf_pycommon: ==0.2.1
+  pycodestyle: ==2.11.1
+  pydocstyle: ==6.3.0
+  pytest: ==7.4.4
+  pytest-mock: ==3.12.0
+  pytest-timeout: ==2.2.0
+  pyyaml: ==6.0.1
+  setuptools: ==68.1.2
+  types-pyyaml: ==6.0.1
+  typing_extensions: ==4.10.0
+  uncrustify: ==0.78.1
+  vcstool: ==0.3.0

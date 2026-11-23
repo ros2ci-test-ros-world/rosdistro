@@ -1,0 +1,4 @@
+# Where rosdep finds the rules of the test rosdistro. Copy this file to
+# /etc/ros/rosdep/sources.list.d/ in place of the one "rosdep init" writes.
+yaml https://raw.githubusercontent.com/ros2ci-test-ros-world/rosdistro/main/rosdep/base.yaml
+yaml https://raw.githubusercontent.com/ros2ci-test-ros-world/rosdistro/main/rosdep/python.yaml

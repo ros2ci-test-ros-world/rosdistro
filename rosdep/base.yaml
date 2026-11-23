@@ -1,0 +1,75 @@
+# rosdep rules for the test rosdistro.
+#
+# The ubuntu and rhel entries are copied from the rules in ros/rosdistro for
+# the same keys. The conda entries are new. Only keys that something in the
+# test workspaces needs are here.
+
+benchmark:
+  conda:
+  - benchmark
+  rhel:
+  - google-benchmark-devel
+  ubuntu:
+    '*':
+    - libbenchmark-dev
+cmake:
+  conda:
+  - cmake
+  rhel:
+  - cmake3
+  ubuntu:
+  - cmake
+cppcheck:
+  conda:
+  - cppcheck
+  rhel:
+  - cppcheck
+  ubuntu:
+  - cppcheck
+git:
+  conda:
+  - git
+  rhel:
+  - git
+  ubuntu:
+  - git
+libatomic:
+  rhel:
+  - libatomic
+  ubuntu:
+  - libatomic1
+libgmock-dev:
+  conda:
+  - gmock
+  rhel:
+  - gmock-devel
+  ubuntu:
+  - libgmock-dev
+libgtest-dev:
+  conda:
+  - gtest
+  rhel:
+  - gtest-devel
+  ubuntu:
+  - libgtest-dev
+libxml2-utils:
+  conda:
+  - libxml2
+  rhel:
+  - libxml2
+  ubuntu:
+  - libxml2-utils
+ninja-build:
+  rhel:
+  - ninja-build
+  conda:
+  - ninja
+  ubuntu:
+  - ninja-build
+uncrustify:
+  conda:
+  - uncrustify
+  rhel:
+  - uncrustify
+  ubuntu:
+  - uncrustify

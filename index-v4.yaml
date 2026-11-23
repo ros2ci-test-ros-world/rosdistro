@@ -1,0 +1,11 @@
+%YAML 1.1
+# Index of the test rosdistro. See REP 153 for the format.
+---
+distributions:
+  rolling:
+    distribution: [rolling/distribution.yaml]
+    distribution_status: rolling
+    distribution_type: ros2
+    python_version: 3
+type: index
+version: 4
