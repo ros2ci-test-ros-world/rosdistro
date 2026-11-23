@@ -16,6 +16,7 @@ base:
   python: ==3.12.3
 
 pins:
+  argcomplete: ==3.1.4
   benchmark: ==1.8.3
   catkin_pkg: ==1.0.0
   cmake: ==3.28.3

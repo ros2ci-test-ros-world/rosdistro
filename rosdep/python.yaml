@@ -15,6 +15,13 @@ pydocstyle:
       - pydocstyle
   ubuntu:
   - pydocstyle
+python3-argcomplete:
+  conda:
+  - argcomplete
+  rhel:
+  - python%{python3_pkgversion}-argcomplete
+  ubuntu:
+  - python3-argcomplete
 python3-catkin-pkg-modules:
   conda:
   - catkin_pkg
