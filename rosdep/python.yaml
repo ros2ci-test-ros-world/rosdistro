@@ -455,7 +455,7 @@ python3-rosdistro-modules:
   rhel:
   - python%{python3_pkgversion}-rosdistro
   ubuntu:
-  - python3-rosdistro
+  - python3-rosdistro-modules
 python3-setuptools:
   conda:
   - setuptools
