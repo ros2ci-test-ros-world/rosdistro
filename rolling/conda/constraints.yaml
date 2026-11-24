@@ -26,6 +26,7 @@ pins:
   cli11: ==2.4.1
   cmake: ==3.28.3
   colcon-common-extensions: 0.3.*
+  colcon-ros-domain-id-coordinator: '>=0.2.1,<0.3'
   colorama: ==0.4.6
   console_bridge: ==1.0.1
   cppcheck: ==2.15.0

@@ -64,6 +64,13 @@ python3-colcon-common-extensions:
   - python%{python3_pkgversion}-colcon-common-extensions
   ubuntu:
   - python3-colcon-common-extensions
+python3-colcon-ros-domain-id-coordinator:
+  conda:
+  - colcon-ros-domain-id-coordinator
+  rhel:
+  - python%{python3_pkgversion}-colcon-ros-domain-id-coordinator
+  ubuntu:
+  - python3-colcon-ros-domain-id-coordinator
 python3-colorama:
   conda:
   - colorama
