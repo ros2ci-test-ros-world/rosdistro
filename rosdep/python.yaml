@@ -56,7 +56,7 @@ python3-catkin-pkg-modules:
   rhel:
   - python%{python3_pkgversion}-catkin_pkg
   ubuntu:
-  - python3-catkin-pkg
+  - python3-catkin-pkg-modules
 python3-colcon-common-extensions:
   conda:
   - colcon-common-extensions
@@ -500,7 +500,7 @@ python3-vcstool:
   rhel:
   - python3-vcstool
   ubuntu:
-  - vcstool
+  - python3-vcstool
 python3-yaml:
   conda:
   - pyyaml
