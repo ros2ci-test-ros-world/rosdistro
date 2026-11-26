@@ -1,11 +1,31 @@
 %YAML 1.1
-# The test Rolling distribution. No packages are released into it yet.
+# The test Rolling distribution.
+#
+# The release entries are in the existing format (REP 143), with the
+# source repository where a release repository would be. They are here so
+# that rosdep knows these are ROS packages and gives their package names.
+# The entry format of the new build system is not decided yet; these
+# entries will be rewritten when it is.
 ---
 release_platforms:
   rhel:
   - '10'
   ubuntu:
   - resolute
-repositories: {}
+repositories:
+  ament_cmake:
+    release:
+      packages:
+      - ament_cmake_core
+      tags:
+        release: '{version}'
+      url: https://github.com/ament/ament_cmake.git
+      version: 2.9.3-1
+  ament_package:
+    release:
+      tags:
+        release: '{version}'
+      url: https://github.com/ament/ament_package.git
+      version: 0.19.1-1
 type: distribution
 version: 2

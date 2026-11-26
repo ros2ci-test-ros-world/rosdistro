@@ -12,7 +12,7 @@ workspaces need.
 | Path | What it is |
 |---|---|
 | `index-v4.yaml` | The index. Point `ROSDISTRO_INDEX_URL` at its raw URL. |
-| `rolling/distribution.yaml` | The test Rolling distribution. Nothing is released into it yet. |
+| `rolling/distribution.yaml` | The test Rolling distribution. It lists two packages, `ament_package` and `ament_cmake_core`, in a placeholder form. |
 | `rolling/conda/constraints.yaml` | The versions conda packages are held to for Rolling. |
 | `rosdep/base.yaml`, `rosdep/python.yaml` | rosdep rules. |
 | `rosdep/sources.list.d/20-default.list` | The rosdep sources list that names those rule files. |
