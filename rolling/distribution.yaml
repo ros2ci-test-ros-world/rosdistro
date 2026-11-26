@@ -20,17 +20,81 @@ release_platforms:
 repositories:
   ament_cmake:
     release:
-      skip:
-      - ament_cmake_google_benchmark
       tags:
         release: '{version}'
       url: https://github.com/ros2ci-test-ros-world/ament_cmake.git
       version: 2.9.3
+  ament_cmake_ros:
+    release:
+      tags:
+        release: '{version}'
+      url: https://github.com/ros2/ament_cmake_ros.git
+      version: 0.16.1
+  ament_index:
+    release:
+      tags:
+        release: '{version}'
+      url: https://github.com/ament/ament_index.git
+      version: 1.14.2
+  ament_lint:
+    release:
+      tags:
+        release: '{version}'
+      url: https://github.com/ament/ament_lint.git
+      version: 0.21.4
   ament_package:
     release:
       tags:
         release: '{version}'
       url: https://github.com/ros2ci-test-ros-world/ament_package.git
       version: 0.19.1
+  google_benchmark_vendor:
+    release:
+      tags:
+        release: '{version}'
+      url: https://github.com/ament/google_benchmark_vendor.git
+      version: 0.8.0
+  launch:
+    release:
+      tags:
+        release: '{version}'
+      url: https://github.com/ros2/launch.git
+      version: 3.10.3
+  mimick_vendor:
+    release:
+      tags:
+        release: '{version}'
+      url: https://github.com/ros2/mimick_vendor.git
+      version: 0.10.0
+  osrf_testing_tools_cpp:
+    release:
+      tags:
+        release: '{version}'
+      url: https://github.com/osrf/osrf_testing_tools_cpp.git
+      version: 2.3.1
+  performance_test_fixture:
+    release:
+      tags:
+        release: '{version}'
+      url: https://github.com/ros2/performance_test_fixture.git
+      version: 0.5.1
+  rcutils:
+    release:
+      tags:
+        release: '{version}'
+      url: https://github.com/ros2/rcutils.git
+      version: 7.2.3
+  ros_workspace:
+    release:
+      tags:
+        release: '{version}'
+      url: https://github.com/ros2/ros_workspace.git
+      version: 1.0.3
+  uncrustify_vendor:
+    release:
+      tags:
+        release: '{version}'
+      url: https://github.com/ament/uncrustify_vendor.git
+      version: 3.3.0
 type: distribution
 version: 2
