@@ -1,11 +1,16 @@
 %YAML 1.1
 # The test Rolling distribution.
 #
-# The release entries are in the existing format (REP 143), with the
-# source repository where a release repository would be. They are here so
-# that rosdep knows these are ROS packages and gives their package names.
-# The entry format of the new build system is not decided yet; these
-# entries will be rewritten when it is.
+# A release entry names the source repository, not a release repository:
+#
+#   url      the source repository
+#   version  the version every package in it has, with nothing after it
+#   tags     how the tag of a version is named; the tag is the version
+#            itself when this is left out
+#   skip     packages in the repository that are not released
+#
+# The packages of a repository are not listed. The build system finds
+# them in the source at the tag. See README.md.
 ---
 release_platforms:
   rhel:
@@ -15,17 +20,15 @@ release_platforms:
 repositories:
   ament_cmake:
     release:
-      packages:
-      - ament_cmake_core
       tags:
         release: '{version}'
-      url: https://github.com/ament/ament_cmake.git
-      version: 2.9.3-1
+      url: https://github.com/ros2ci-test-ros-world/ament_cmake.git
+      version: 2.9.3
   ament_package:
     release:
       tags:
         release: '{version}'
-      url: https://github.com/ament/ament_package.git
-      version: 0.19.1-1
+      url: https://github.com/ros2ci-test-ros-world/ament_package.git
+      version: 0.19.1
 type: distribution
 version: 2

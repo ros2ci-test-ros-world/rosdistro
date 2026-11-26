@@ -12,10 +12,39 @@ workspaces need.
 | Path | What it is |
 |---|---|
 | `index-v4.yaml` | The index. Point `ROSDISTRO_INDEX_URL` at its raw URL. |
-| `rolling/distribution.yaml` | The test Rolling distribution. It lists two packages, `ament_package` and `ament_cmake_core`, in a placeholder form. |
+| `rolling/distribution.yaml` | The test Rolling distribution, with its releases. |
 | `rolling/conda/constraints.yaml` | The versions conda packages are held to for Rolling. |
 | `rosdep/base.yaml`, `rosdep/python.yaml` | rosdep rules. |
 | `rosdep/sources.list.d/20-default.list` | The rosdep sources list that names those rule files. |
+
+## Releases
+
+A release is an entry in `rolling/distribution.yaml`:
+
+```yaml
+ament_cmake:
+  release:
+    tags:
+      release: '{version}'
+    url: https://github.com/ros2ci-test-ros-world/ament_cmake.git
+    version: 2.9.3
+```
+
+It has the shape of the entries in ros/rosdistro, so existing tools still
+read the file, but it means something else:
+
+- `url` is the source repository. There is no release repository.
+- `version` is the version in every `package.xml` at the tag, with no
+  increment after it. Making a release changes this one line.
+- `tags: release:` says how a version's tag is named. Left out, the tag is
+  the version.
+- `skip` lists packages of the repository that are not released.
+- The packages are not listed. The build system reads them from the source
+  at the tag. An existing tool that reads this file therefore sees only the
+  repository's own name as its package.
+
+The source repositories named here are copies made for testing, in the same
+organization as this repository. They are not forks.
 
 ## rosdep rules
 
