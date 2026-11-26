@@ -26,6 +26,9 @@ repositories:
       version: 2.9.3
   ament_cmake_ros:
     release:
+      skip:
+      - rmw_test_fixture
+      - rmw_test_fixture_implementation
       tags:
         release: '{version}'
       url: https://github.com/ros2/ament_cmake_ros.git
