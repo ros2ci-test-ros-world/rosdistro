@@ -22,14 +22,25 @@ repositories:
     release:
       skip:
       - ament_cmake_google_benchmark
-      tags:
-        release: '{version}'
+      - no_such_package
       url: https://github.com/ros2ci-test-ros-world/ament_cmake.git
       version: 2.9.3
   ament_package:
     release:
+      url: https://github.com/ros2ci-test-ros-world/ament_package.git
+      version: 9.9.9
+  bad_url:
+    release:
+      url: git@github.com:ros2ci-test-ros-world/ament_package.git
+      version: 0.19.1
+  bad_version:
+    release:
+      url: https://github.com/ros2ci-test-ros-world/ament_package.git
+      version: 0.19.1-1
+  no_tag:
+    release:
       tags:
-        release: '{version}'
+        release: 'v{version}'
       url: https://github.com/ros2ci-test-ros-world/ament_package.git
       version: 0.19.1
 type: distribution
