@@ -20,6 +20,8 @@ release_platforms:
 repositories:
   ament_cmake:
     release:
+      skip:
+      - ament_cmake_google_benchmark
       tags:
         release: '{version}'
       url: https://github.com/ros2ci-test-ros-world/ament_cmake.git
