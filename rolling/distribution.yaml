@@ -27,6 +27,7 @@ repositories:
   ament_cmake_ros:
     release:
       skip:
+      - ament_cmake_ros
       - rmw_test_fixture
       - rmw_test_fixture_implementation
       tags:
